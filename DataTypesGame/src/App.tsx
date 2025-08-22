@@ -1,4 +1,5 @@
 import React from "react";
+void React; // ← silences TS6133 without config changes
 import ButtonOnlyTracingQuest from "./ButtonOnlyTracingQuest";
 
 export default function App() {

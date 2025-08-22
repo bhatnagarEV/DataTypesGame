@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect, useRef, useCallback } from "react";
+void React; // ← silences TS6133 without config changes
 import { motion } from "framer-motion";
 
 // --- Data model -------------------------------------------------------------
@@ -372,7 +373,7 @@ export default function ButtonOnlyTracingQuest() {
 
   const current = useMemo(() => QUESTIONS.find((q) => q.id === currentId)!, [currentId]);
   const nextId = useMemo(() => prevIndex[current.answerLabel], [current]);
-  const isFinished = !nextId;
+  //const isFinished = !nextId;
 
   useEffect(() => {
     setShake(true);
